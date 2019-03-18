@@ -38,7 +38,7 @@ class GoDataProcessor:
     def load_go_data(self, data_type='train', num_samples=1000,
                      use_generator=False):
         index = KGSIndex(data_directory=self.data_dir)
-        #index.download_files()
+        index.download_files()
 
         sampler = Sampler(data_dir=self.data_dir)
         data = sampler.draw_data(data_type, num_samples)
